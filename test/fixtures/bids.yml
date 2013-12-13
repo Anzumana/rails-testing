@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  paragraph: MyText
+  idnumber: 1
+  p1: false
+  p2: false
+  p3: false
+  p4: false
+  p5: false
+
+two:
+  paragraph: MyText
+  idnumber: 1
+  p1: false
+  p2: false
+  p3: false
+  p4: false
+  p5: false

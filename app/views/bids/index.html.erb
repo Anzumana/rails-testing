@@ -1,0 +1,40 @@
+<h1>Listing bids</h1>
+
+<table>
+  <tr>
+    <th>Idnumber</th>
+    <th>Paragraph</th>
+    <th>P1</th>
+    <th>P2</th>
+    <th>P3</th>
+    <th>P4</th>
+    <th>P5</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @bids.each do |bid| %>
+  <tr>
+    <td><%= bid.idnumber %></td>
+    <td><%= bid.paragraph %></td>
+    <td><%= bid.p1 %></td>
+    <td><%= bid.p2 %></td>
+    <td><%= bid.p3 %></td>
+    <td><%= bid.p4 %></td>
+    <td><%= bid.p5 %></td>
+    <td><%= link_to 'Show', bid %></td>
+    <td><%= link_to 'Edit', edit_bid_path(bid) %></td>
+    <td><%= link_to 'Destroy', bid, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+
+<br />
+<%= link_to 'New Bid', new_bid_path %>
+
+
+<%= link_to 'Home', welcome_index_path %>
+
+<br>

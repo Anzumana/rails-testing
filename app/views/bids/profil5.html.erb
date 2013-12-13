@@ -1,0 +1,23 @@
+
+<h1>Profile 5</h1>
+
+<table>
+  <tr>
+    <th>Idnumber</th>
+    <th>Paragraph</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @tmp2.each do |bid| %>
+  <tr>
+    <td><%= bid.idnumber %></td>
+    <td><%= bid.paragraph %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+
+<%= link_to 'Home', welcome_index_path %>
