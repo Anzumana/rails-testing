@@ -3,10 +3,8 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 #
 #
-<script>
-function myFunction()
-{
-document.write("<h1>This is a heading</h1>");
-document.write("<p>This is a paragraph.</p>");
-}
-</script>
+#
+paintIt = (element, backgroundColor, textColor) ->
+  element.style.backgroundColor = backgroundColor
+  if textColor?
+    element.style.color = textColor
