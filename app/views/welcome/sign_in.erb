@@ -1,0 +1,15 @@
+<h1>Sign in</h1>
+
+Username:
+<%= form_tag :action => 'sign_in' do %>
+<%= text_field_tag 'userName', @userName %>
+<br>
+<br>
+Password:<br>
+<%= text_field_tag 'password', @password %>
+<br>
+
+<%= submit_tag 'Sign in'%>
+<% end %>
+<%#= link_to 'User', welcome_index_path %>
+<%#= link_to 'Admin', bids_path %>
