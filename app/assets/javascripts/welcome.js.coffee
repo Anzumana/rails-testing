@@ -6,5 +6,10 @@
 #
 paintIt = (element, backgroundColor, textColor) ->
   element.style.backgroundColor = backgroundColor
+	document.write "<h2>TEST</h2>"
   if textColor?
     element.style.color = textColor
+
+	
+
+
