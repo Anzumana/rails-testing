@@ -6,6 +6,6 @@
 <script>
 function myFunction()
 {
-document.getElementById("demo").innerHTML = Date();
+document.getElementById("demo").innerHTML = "asdsd";
 }
 </script>
