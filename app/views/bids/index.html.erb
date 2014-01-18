@@ -17,7 +17,7 @@
 <% @bids.each do |bid| %>
   <tr>
     <td><%= bid.idnumber %></td>
-    <td><%= bid.paragraph %></td>
+    <td><%= simple_format(bid.paragraph) %></td>
     <td><%= bid.p1 %></td>
     <td><%= bid.p2 %></td>
     <td><%= bid.p3 %></td>

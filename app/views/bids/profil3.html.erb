@@ -13,7 +13,7 @@
 <% @tmp2.each do |bid| %>
   <tr>
     <td><%= bid.idnumber %></td>
-    <td><%= bid.paragraph %></td>
+    <td><%= simple_format(bid.paragraph) %></td>
   </tr>
 <% end %>
 </table>
