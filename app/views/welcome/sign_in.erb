@@ -11,5 +11,9 @@ Password:<br>
 
 <%= submit_tag 'Sign in'%>
 <% end %>
+If you have no account yet:
+<%= form_tag :action => 'userCreation' do %>
+<%= submit_tag 'Sign up'%>
+<% end %>
 <%#= link_to 'User', welcome_index_path %>
 <%#= link_to 'Admin', bids_path %>

@@ -1,8 +1,19 @@
 class UserDbsController < ApplicationController
+#my functions
+	def finishRegistration
+	# he i have to load all the data from our database ito the clients database
+		tmp = Bid.all
+	 	tmp.each do |bid| 
+			p = UserDb.create(idnumber:bid.idnumber,p1: bid.p1,p2:bid.p2,p3:bid.p3,p4:bid.p4,p5:bid.p5,p6:bid.p6, paragraph:bid.paragraph,userName:session[:user])
+			p.save
+		end
+		redirect_to "/welcome/index"
+	end
   # GET /user_dbs
   # GET /user_dbs.json
   def index
-    @user_dbs = UserDb.where(:idnumber =>1)
+    @user_dbs = UserDb.where(:userName =>session[:user])
+    #@user_dbs = UserDb.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -31,6 +42,7 @@ class UserDbsController < ApplicationController
       format.json { render json: @user_db }
     end
   end
+
 
   # GET /user_dbs/1/edit
   def edit

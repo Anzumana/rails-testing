@@ -47,9 +47,8 @@ class UsersController < ApplicationController
 		session[:user] = @tmp 
     respond_to do |format|
       if @user.save
-				:
 				
-        format.html { redirect_to "/welcome/index", notice: 'User was successfully created.' }
+        format.html { redirect_to "/user_dbs/finishRegistration", notice: 'User was successfully created.' }
 				#@user
 				
         format.json { render json: @user, status: :created, location: @user }

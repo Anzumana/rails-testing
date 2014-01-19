@@ -15,6 +15,7 @@ class WelcomeController < ApplicationController
 		
 		@test  = User.exists?(userName: @userName,password: @password)
 		if @test==true
+			session[:user] = @userName
 			if @userName == 'admin'
 				redirect_to action: 'admin' 
 			else 
