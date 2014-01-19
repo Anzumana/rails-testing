@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  idnumber: 
+  p1: 
+  p3: 
+
+two:
+  idnumber: 
+  p1: 
+  p3: 

@@ -1,0 +1,40 @@
+<h1>Listing user_dbs</h1>
+
+<%= session[:user] %>
+<table>
+  <tr>
+    <th>Idnumber</th>
+    <th>P1</th>
+    <th>P2</th>
+    <th>P3</th>
+    <th>P4</th>
+    <th>P5</th>
+    <th>P6</th>
+    <th>Paragraph</th>
+    <th>Username</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @user_dbs.each do |user_db| %>
+  <tr>
+    <td><%= user_db.idnumber %></td>
+    <td><%= user_db.p1 %></td>
+    <td><%= user_db.p2 %></td>
+    <td><%= user_db.p3 %></td>
+    <td><%= user_db.p4 %></td>
+		<td><%= user_db.p5 %></td>
+    <td><%= user_db.p6 %></td>
+    <td><%= user_db.paragraph %></td>
+    <td><%= user_db.userName %></td>
+    <td><%= link_to 'Show', user_db %></td>
+    <td><%= link_to 'Edit', edit_user_db_path(user_db) %></td>
+    <td><%= link_to 'Destroy', user_db, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New User db', new_user_db_path %>
