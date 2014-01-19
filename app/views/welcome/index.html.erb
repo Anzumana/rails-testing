@@ -1,11 +1,12 @@
-<h1>Ausschreibung </h1> 
+<h1>User View </h1> 
 <body>
+<%= @tmp %>
+Welcome <%= session[:user] %> . Thanks for using our service
 
-<a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>
-<a href="#" onclick="this.style.backgroundColor='#990000'">Paint it red</a>
-<p> Press on of the options below :s</p>
+<p> Press on of the options below </p>
 </body>
 <br>
+<%= link_to 'Database', user_dbs_path %><br>
 <%= link_to 'Profile1', bids_profil1_path %>
 <br>
 <%= link_to 'Profile2', bids_profil2_path %>

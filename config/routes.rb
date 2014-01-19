@@ -1,4 +1,8 @@
 Test3::Application.routes.draw do
+  resources :user_dbs
+
+  resources :users
+
   get "welcome/index"
   get "bids/index2"
   get "bids/profil1"
@@ -7,7 +11,7 @@ Test3::Application.routes.draw do
   get "bids/profil4"
   get "bids/profil5"
   resources :bids 
-	root :to => 'welcome#index'
+	root :to => 'welcome#sign_in'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
