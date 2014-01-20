@@ -56,6 +56,8 @@ class UserDbsController < ApplicationController
 
     respond_to do |format|
       if @user_db.save
+				p =	TrackChangesDb.create(idnumber:@user_db.idnumber, paragraph:@user_db.paragraph,userName:session[:user])
+				p.save
         format.html { redirect_to @user_db, notice: 'User db was successfully created.' }
         format.json { render json: @user_db, status: :created, location: @user_db }
       else
@@ -69,9 +71,14 @@ class UserDbsController < ApplicationController
   # PUT /user_dbs/1.json
   def update
     @user_db = UserDb.find(params[:id])
-
+		
     respond_to do |format|
       if @user_db.update_attributes(params[:user_db])
+#				test =	UserDb.first
+				p =	TrackChangesDb.create(idnumber:@user_db.idnumber, paragraph:@user_db.paragraph,userName:session[:user])
+				p.save
+				#p =	Track_changes_db.create(idnumber:@user_db.idnumber, paragraph:@user_db.paragraph,userName:session[:user])
+				#p.save
         format.html { redirect_to @user_db, notice: 'User db was successfully updated.' }
         format.json { head :no_content }
       else
@@ -85,6 +92,8 @@ class UserDbsController < ApplicationController
   # DELETE /user_dbs/1.json
   def destroy
     @user_db = UserDb.find(params[:id])
+		p =	TrackChangesDb.create(idnumber:@user_db.idnumber, paragraph:'deleted',userName:session[:user])
+		p.save
     @user_db.destroy
 
     respond_to do |format|
