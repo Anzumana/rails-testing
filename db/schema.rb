@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140119094158) do
+ActiveRecord::Schema.define(:version => 20140120021904) do
 
   create_table "bids", :force => true do |t|
     t.text     "paragraph"
@@ -24,6 +24,16 @@ ActiveRecord::Schema.define(:version => 20140119094158) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
     t.boolean  "p6"
+  end
+
+  create_table "track_changes_dbs", :force => true do |t|
+    t.string   "paragraph"
+    t.string   "userName"
+    t.integer  "numberOfChange"
+    t.integer  "position"
+    t.integer  "idnumber"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
   end
 
   create_table "user_dbs", :force => true do |t|

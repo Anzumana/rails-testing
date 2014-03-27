@@ -1,4 +1,6 @@
 Test3::Application.routes.draw do
+  resources :track_changes_dbs
+
 	get "user_dbs/finishRegistration"
 	get "user_dbs/index2"
   resources :user_dbs
