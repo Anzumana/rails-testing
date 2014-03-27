@@ -1,5 +1,6 @@
 require File.expand_path('../boot', __FILE__)
 
+
 require 'rails/all'
 
 if defined?(Bundler)
@@ -55,5 +56,8 @@ module Test3
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+	# this i can use to force https on every single site 
+	# i can make an exeption for the index site as well as the registration site but when your logged in this should be the case
+	# config.force_ssl = true
   end
 end
