@@ -11,28 +11,33 @@
  *= require_self
  *= require_tree .
 */
-#header {
-  float: right; }
+
 
 #header {
-  font-size: 12px; }
-
-#footer {
-  font-size: 12px;
-  position: relative;
-  bottom: 5px; }
-
-#logoimage {
-  position: left; }
-
-body {
-  font: normal 12px, Arial, Helvetica, sans-serif;
-  color: #444;
-  background-image: url("/images/greyzz/greyzz.png"); }
+ float:right;
+}
+#header{
+ font-size:12px;
+}
+#footer{
+	font-size:12px;
+	position:relative;
+	bottom:5px;
+}
+#logoimage{
+	position:left;
+	}
+body { 
+  font: normal 12px Arial, Helvetica, sans-serif;
+	  color: #444;
+			background-image:url('/images/greyzz/greyzz.png');
+}
 
 h1 {
-  font-weight: normal;
-  font-size: 20px;
-  margin-bottom: 5px;
-  color: #00367B;
-  line-height: 28px; }
+	font-weight: normal;
+		font-size: 20px;
+			margin-bottom: 5px;
+				color:#00367B;
+					line-height: 28px;
+}
+
