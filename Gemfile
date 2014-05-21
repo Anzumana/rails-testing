@@ -22,6 +22,12 @@ end
 
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'prawn'
+
+#generate pdf
+gem 'prawn-rails'
+# generate text
+gem 'lorem_ipsum_amet'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

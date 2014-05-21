@@ -1,20 +1,7 @@
-<h1>User View </h1> 
 <body>
-<%= @tmp %>
-Welcome <%= session[:user] %> . Thanks for using our service
-
-<p> Press on of the options below </p>
+	<div class="panel panel-default">
+	<div class="panel-heading">Unregisted User View</div>
+	<div class="panel-body">
+	<%= lorem_ipsum(300) %>
+	</div>
 </body>
-<br>
-<%= link_to 'Database', user_dbs_path %><br>
-<%= link_to 'Profile1', bids_profil1_path %>
-<br>
-<%= link_to 'Profile2', bids_profil2_path %>
-<br>
-<%= link_to 'Profile3', bids_profil3_path %>
-<br>
-<%= link_to 'Profile4', bids_profil4_path %>
-<br>
-<%= link_to 'Profile5', bids_profil5_path %>
-<br>
-<%= link_to 'Home', welcome_index_path %>

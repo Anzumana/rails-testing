@@ -1,7 +1,10 @@
 class WelcomeController < ApplicationController
-  def index
+ 	def index
 	
-  end
+ 	end
+	def index_registerd
+	end
+
 	def userCreation
 		redirect_to "/users/new"
 	end

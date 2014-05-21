@@ -11,33 +11,54 @@
  *= require_self
  *= require_tree .
 */
-
+@import "bootstrap";
 
 #header {
- float:right;
+ 	border-style:solid;
+ 	border-width:2px;
+ 	border-color:blue;
+ 	font-size:25px;
+
 }
-#header{
- font-size:12px;
+#header a:link {
+	color:black;
 }
+#header a:visited {
+	color:black;
+}
+
+
 #footer{
 	font-size:12px;
-	position:relative;
+ 	float:left;
+	position:fixed;
 	bottom:5px;
+	border-style:solid;
+	border-width:2px;
+	border-color:yellow;
 }
 #logoimage{
-	position:left;
-	}
-body { 
-  font: normal 12px Arial, Helvetica, sans-serif;
-	  color: #444;
-			background-image:url('/images/greyzz/greyzz.png');
 }
-
+#nav{
+	position:relative;
+	right:-200px;
+	max-width:100px;
+	border-style:solid;
+	border-width:2px;
+	border-color:yellow;
+}
+body { 
+  	font: normal 12px Arial, Helvetica, sans-serif;
+  	color:black;
+    background: url('greyzz.png');
+	border-style:solid;
+	border-width:5px;
+	border-color:red;
+}
 h1 {
 	font-weight: normal;
-		font-size: 20px;
-			margin-bottom: 5px;
-				color:#00367B;
-					line-height: 28px;
+	font-size: 20px;
+	margin-bottom: 5px;
+	color:black;
+	line-height: 28px;
 }
-

@@ -1,7 +1,4 @@
-<h1>Listing user_dbs</h1>
-
-<%= session[:user] %>
-<table>
+<table class="table table-hover">
   <tr>
     <th>Idnumber</th>
     <th>P1</th>
@@ -16,7 +13,14 @@
     <th></th>
     <th></th>
   </tr>
-
+<div class="panel panel-default">
+  <!-- Default panel contents -->
+    <div class="panel-heading">Listing user_dbs</div>
+	  <div class="panel-body">
+		<%= session[:user] %>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nu
+	      <p>...</p>
+		    </div>
 <% @user_dbs.each do |user_db| %>
   <tr>
     <td><%= user_db.idnumber %></td>
@@ -24,13 +28,24 @@
     <td><%= user_db.p2 %></td>
     <td><%= user_db.p3 %></td>
     <td><%= user_db.p4 %></td>
-		<td><%= user_db.p5 %></td>
+	<td><%= user_db.p5 %></td>
     <td><%= user_db.p6 %></td>
     <td><%= user_db.paragraph %></td>
     <td><%= user_db.userName %></td>
-    <td><%= link_to 'Show', user_db %></td>
-    <td><%= link_to 'Edit', edit_user_db_path(user_db) %></td>
-    <td><%= link_to 'Destroy', user_db, confirm: 'Are you sure?', method: :delete %></td>
+	<td>
+		<div class="btn-group">
+			<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+				Action <span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu" role="menu">
+				<li><%= link_to 'MoveUp', edit_user_db_path(user_db) ,class: "glyphicon glyphicon-chevron-up"%></li>
+				<li><%= link_to 'MoveDown', edit_user_db_path(user_db) ,class: "glyphicon glyphicon-chevron-down"%></li>
+				<li><%= link_to 'Edit', edit_user_db_path(user_db) ,class: "glyphicon glyphicon-pencil"%></li>
+				<li class="divider"></li>
+				<li><%= link_to 'Delete', user_db, class: "glyphicon glyphicon-trash", confirm: 'Are you sure?', method: :delete %></li>
+			</ul>
+	</td>
+	</div>
   </tr>
 <% end %>
 </table>

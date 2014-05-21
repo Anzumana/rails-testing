@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Test3</title>
-<div id="header" text-align:right;>
-<a href="http://www.pecodata.de/glossar/Glossar-2/">Glossar</a>
-<a href="http://www.pecodata.de/kontakt">Kontakt</a>
-<a href="http://www.pecodata.de/impressum">Impressum</a><span class="label label-default">Default</span>
-</div>
+	<head>
+		<title>Test3</title>
 
-<div id="logoimage">
-	<%=link_to image_tag("logo.gif", alt: "logo") , welcome_index_path%>
-	<%=link_to image_tag("default.jpg", alt: "title"), welcome_index_path%>
-</div>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<div id="yieldcontent">
+		<%= stylesheet_link_tag    "application", :media => "all" %>
+		<%= javascript_include_tag "application" %>
+		<%= csrf_meta_tags %>
+	</head>
 
-<%= yield %>
-<br>
-<br>
-<br>
-</div>
+	<body>
+		<div id="container">
+			<div class="row">
+				<div class="col-md-6"> </div>
+				<div class="col-md-2 col-md-offset-4">
+					<ul id="header" class="nav nav-pills">
+						<li><a href="http://www.pecodata.de/kontakt"><span class="glyphicon glyphicon-user"></span></a></li>
+						<li><a href="http://www.pecodata.de/glossar/Glossar-2/"><span class="glyphicon glyphicon-cog"></span></a></li>
+						<li>
+						<%= link_to "", {controller: "welcome", action: "help"}, class: "glyphicon glyphicon-question-sign" %>
+						</li>
+					</ul>
+					</div>
+			</div>
+		</div>
+		<div id="container">
+			<div class="row">
+				<div class="col-md-6 col-md-offset-4">
+					<div id="logoimage">
+						<%=link_to image_tag("logo.gif", alt: "logo") , welcome_index_path%>
+					</div>
+					<ul class="nav nav-pills">
+						<li class="active">
+							<%= link_to "",welcome_index_path,class:"glyphicon glyphicon-home"  %>
+							</li>
+						<li><a href="#">Profile</a></li>
+						<li><a href="#">Messages</a></li>
+				  </ul>
 
-</body>
-<div id="footer" text-align:center;>
-© 2013 pecodata GmbH. Alle Rechte vorbehalten.</div>
+					<div class="col-md-2"> 
+					</div>
+					<div id="yieldcontent">
+						<%= yield %>
+					</div>
+					<ol class="breadcrumb">
+						<li> <%= link_to "Home", {controller: "welcome", action: "index"}%> </li>
+						<li> <%= link_to "Data", {controller: "welcome", action: "index"}%> </li>
+						<li> <%= link_to "Home", {controller: "welcome", action: "index"}%> </li>
+					</ol>
+			</div>
+		</div>
+			<div id="footer">
+			© 2013 pecodata GmbH. Alle Rechte vorbehalten.
+		</div>
+	</body>
 </html>

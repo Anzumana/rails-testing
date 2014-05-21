@@ -3,17 +3,18 @@ class BidsController < ApplicationController
 	def index2
 		@tmp = Bid.where(:p1 => false).first
 		@tmp2 = Bid.where(:p1 => true)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @bids }
-    end
+		respond_to do |format|
+		  format.html # index.html.erb
+		  format.json { render json: @bids }
+		end
 	end
 
 	def profil1
 		@tmp2 = Bid.where(:p1 => true)
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @bids }
+		respond_to do |format|
+		  format.html # index.html.erb
+		  format.json { render json: @bids }
+		  format.pdf { render :layout => false }
 		end
 	end
 	def profil2
